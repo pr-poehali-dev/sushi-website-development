@@ -69,10 +69,10 @@ const config = {
           },
         },
         sushi: {
-          primary: "#FF6633",
-          secondary: "#FF8C66",
+          primary: "#F2353D",
+          secondary: "#3DAA35",
           light: "#F9F9F9",
-          dark: "#333333",
+          dark: "#2E2E2E"
         }
       },
       borderRadius: {

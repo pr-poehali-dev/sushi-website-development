@@ -22,7 +22,7 @@ interface MenuCardProps {
 
 const MenuCard = ({ product, onAddToCart }: MenuCardProps) => {
   return (
-    <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+    <Card className="overflow-hidden hover:shadow-lg transition-shadow border border-gray-200">
       <div className="relative h-48 overflow-hidden">
         <img 
           src={product.imageUrl} 
@@ -31,16 +31,16 @@ const MenuCard = ({ product, onAddToCart }: MenuCardProps) => {
         />
         <div className="absolute top-2 right-2 flex flex-col gap-2">
           {product.isPopular && (
-            <Badge className="bg-[#FF6633]">Популярное</Badge>
+            <Badge className="bg-[#F2353D]">Хит продаж</Badge>
           )}
           {product.isNew && (
-            <Badge className="bg-[#4CAF50]">Новинка</Badge>
+            <Badge className="bg-[#3DAA35]">Новинка</Badge>
           )}
         </div>
       </div>
       <CardContent className="p-4">
         <div className="flex justify-between items-start mb-2">
-          <h3 className="font-medium text-lg">{product.title}</h3>
+          <h3 className="font-bold text-lg">{product.title}</h3>
           <span className="text-sm text-gray-500">{product.weight}</span>
         </div>
         <p className="text-gray-600 text-sm mb-4 line-clamp-2">{product.description}</p>
@@ -48,7 +48,7 @@ const MenuCard = ({ product, onAddToCart }: MenuCardProps) => {
           <span className="font-bold text-lg">{product.price} ₽</span>
           <Button 
             onClick={() => onAddToCart(product.id)}
-            className="bg-[#FF6633] hover:bg-[#FF8C66]"
+            className="bg-[#F2353D] hover:bg-[#d92e36] text-white"
             size="sm"
           >
             В корзину
